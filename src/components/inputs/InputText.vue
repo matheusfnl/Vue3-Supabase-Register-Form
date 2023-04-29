@@ -11,6 +11,7 @@
       spellcheck="false"
       @change="$emit('model', $event.target.value)"
       @blur="$emit('blur')"
+      @input="$emit('input')"
     />
   </div>
 </template>
