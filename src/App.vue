@@ -26,8 +26,6 @@
       const body = document.querySelector('body');
       const theme = localStorage.getItem('dark_theme');
 
-      console.log(theme);
-
       if(theme) {
         if(theme === 'true') {
           return body.classList.add('dark-theme');
