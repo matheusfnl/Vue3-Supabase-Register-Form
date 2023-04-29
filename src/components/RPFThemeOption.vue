@@ -14,12 +14,20 @@
   import DayNightSwitch from '@/components/inputs/DayNightSwitch.vue';
 
   export default {
-    name: 'DebugOption',
+    name: 'ThemeOption',
     components: { DayNightSwitch },
     data() {
       return {
         night_theme: false,
       };
+    },
+
+    created() {
+      const theme = localStorage.getItem('dark_theme');
+
+      if(theme === 'true') {
+        this.night_theme = true;
+      }
     },
 
     methods: {

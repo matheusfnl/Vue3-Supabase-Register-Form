@@ -57,8 +57,12 @@
 
     data() {
       return {
-        checkbox_value: this.default_value,
+        checkbox_value: false,
       };
+    },
+
+    mounted() {
+      this.checkbox_value = this.value;
     },
 
     computed: {

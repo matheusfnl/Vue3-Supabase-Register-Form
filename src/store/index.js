@@ -52,6 +52,8 @@ const actions = {
   },
 
   setTheme: async ({ commit }, theme) => {
+    localStorage.setItem('dark_theme', theme);
+
     commit('newTheme', theme);
   },
 }

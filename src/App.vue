@@ -12,8 +12,6 @@
       getTheme(state) {
         const body = document.querySelector('body');
 
-        console.log(state)
-
         if(state) {
           body.classList.remove('light-theme')
           return body.classList.add('dark-theme')
@@ -26,8 +24,19 @@
 
     mounted() {
       const body = document.querySelector('body');
+      const theme = localStorage.getItem('dark_theme');
 
-      body.classList.add('light-theme');
+      console.log(theme);
+
+      if(theme) {
+        if(theme === 'true') {
+          return body.classList.add('dark-theme');
+        }
+
+        return body.classList.add('light-theme');
+      }
+
+      return body.classList.add('light-theme');
     },
 
     computed: {
