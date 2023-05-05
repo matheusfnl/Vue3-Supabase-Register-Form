@@ -144,13 +144,6 @@
     transition: all .3s;
     box-shadow: 0px 0px 4px #ffffff;
   }
-  .label-text {
-    user-select: none;
-    margin-right: .5rem;
-    margin-bottom: 2px;;
-    font-weight: bold;
-    color: #273542;
-  }
 
   .toggle-input { display: none }
   .toggle-container {
